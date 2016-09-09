@@ -1,0 +1,26 @@
+{
+  "plugins": [
+    "html"
+  ],
+  "parser": "babel-eslint",
+  "extends": [
+    "eslint:recommended"
+  ],
+  "ecmaFeatures": {
+    "modules": true
+  },
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true,
+    "jquery": true,
+    "amd": true,
+    "commonjs": true
+  },
+  "rules": {
+    "strict": 2,
+    "no-alert": 2,
+    "no-console": 1,
+    "no-eval": 2
+  }
+}

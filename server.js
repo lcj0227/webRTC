@@ -1,7 +1,6 @@
 //监听服务器
 var express = require('express');
 var app = express();
-//var server = require('https').createServer(app);
 var https = require('https');
 var fs = require('fs');
 var pk = fs.readFileSync('./privatekey.pem');
@@ -22,6 +21,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.get('/', function(req, res) {
 	res.sendfile(__dirname + '/index.html');
 });
+
 //新用户与服务器建立WebSocket连接时触发
 SkyRTC.rtc.on('new_connect', function(socket) {//socket——新建立的WebSocket连接实例
 	console.log('创建新连接');
